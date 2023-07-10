@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">URL Shortener</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="POST" class="mb-4">
+                    <div class="form-group">
+                        <input type="url" name="url" class="form-control" placeholder="Enter your URL" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Shorten URL</button>
+                </form>
+
+                {% if short_url %}
+                <div class="alert alert-success text-center" role="alert">
+                    Short URL: <a href="{{ short_url }}" id="short-url">{{ short_url }}</a>
+                    <button onclick="copyToClipboard()" class="btn btn-secondary btn-sm">Copy</button>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function copyToClipboard() {
+            var copyText = document.getElementById("short-url");
+            var tempInput = document.createElement("input");
+            tempInput.setAttribute("value", copyText.textContent);
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Copied the URL: " + copyText.textContent);
+        }
+    </script>
+</body>
+</html>
