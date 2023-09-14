@@ -20,5 +20,37 @@ The URL Shortener is a Flask-based web application that allows users to shorten 
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository: git clone [repository-url]
+2. Navigate to the project directory: cd [directory-name]
+3. Install the required packages: pip install -r requirements.txt
+
+### Usage
+
+1. Start the Flask application: python app.py
+
+2. Open a web browser and navigate to `http://127.0.0.1:5000/` to access the URL shortener interface.
+
+3. Enter a URL into the provided form and click the "Shorten URL" button.
+
+4. Copy the shortened URL and use it as needed!
+
+## Files & Directories
+
+- `app.py`: Main Flask application file.
+- `Database.py`: Contains functions related to SQLite database operations.
+- `home.html`: Frontend HTML template for the application.
+- `urls.db`: SQLite database file storing original and shortened URLs.
+- `requirements.txt`: Lists project dependencies for pip.
+
+## Dependencies
+
+- Flask (v2.0.1)
+- Jinja2 (v3.0.1)
+- Werkzeug (v2.0.1)
+
+## License
+
+This project is licensed under the MIT License. (You can modify this as per your license choice)
+
+
 
