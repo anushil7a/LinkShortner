@@ -2,13 +2,12 @@
 
 
 
-https://github.com/anushil7a/LinkShortner/assets/87778762/5886b8ea-e318-418b-8433-3a49d05cbfb4
-
-
 
 ## Overview
 
 The URL Shortener is a Flask-based web application that allows users to shorten long URLs. The application provides a simple interface for users to input a URL, which then returns a shortened version that redirects to the original URL when accessed.
+
+https://github.com/anushil7a/LinkShortner/assets/87778762/5886b8ea-e318-418b-8433-3a49d05cbfb4
 
 ## Features
 
